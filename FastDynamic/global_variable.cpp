@@ -1,7 +1,8 @@
 #pragma once
-#include "stdafx.h"
 #include "global_variable.h"
+#include <limits>
 
+const double DBL_MAX = std::numeric_limits<double>::max();
 
 long long g_max_label_counter = 0;
 int g_cnt_node_of_data_graph = 0;
@@ -96,7 +97,7 @@ vector<long long> g_forward_build_sequence;
 long long g_forward_build_parent[MAX_QUERY_NODE];
 int g_forward_level[MAX_QUERY_NODE];
 
-//vector<set <long long>> g_adj_list_data_graph;
+//vector<set <long long> > g_adj_list_data_graph;
 long long g_build_cpi_sequence[MAX_QUERY_NODE];
 long long g_build_cpi_sequence_size;
 int * g_already_has_one_parent_data_node;
@@ -142,13 +143,13 @@ int * g_one_hop_label_count_data_graph;
 int * g_two_hop_label_count_data_graph;
 int * g_one_hop_label_count_query_graph = NULL;
 int * g_two_hop_label_count_query_graph = NULL;
-vector<set<long long>> g_set_of_node_adj_list_query_graph;
+vector<set<long long> > g_set_of_node_adj_list_query_graph;
 vector < pair<long long, long long> > level_index;
 
 long long BFS_parent_query[MAX_QUERY_NODE];
 long long BFS_level_query[MAX_QUERY_NODE];
 
-//vector<set <int>> g_adj_list_one_to_four_data_graph;
+//vector<set <int> > g_adj_list_one_to_four_data_graph;
 HashTable * g_adj_list_one_hop_distance_data_graph;
 HashTable * g_adj_list_two_hop_distance_data_graph;
 

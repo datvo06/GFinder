@@ -1,10 +1,11 @@
-#include "stdafx.h"
 
 #include "utility.h"
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <assert.h>
+#include <ctime>
+#include <chrono>
 
 using namespace std;
 
@@ -18,6 +19,7 @@ CUtility* CGlobal::listtime = new CUtility();
 CUtility* CGlobal::rtreequerytime = new CUtility();
 CUtility* CGlobal::maintain = new CUtility();
 CUtility* CGlobal::m_preprocess = new CUtility();
+
 
 // bool CGlobal::flag = false;
 // bool CGlobal::countSpace = false;
@@ -52,27 +54,6 @@ CUtility::~CUtility()
 {
 }
 
-
-int gettimeofday(struct timeval * tp, struct timezone * tzp)
-{
-	// Note: some broken versions only have 8 trailing zero's, the correct epoch has 9 trailing zero's
-	// This magic number is the number of 100 nanosecond intervals since January 1, 1601 (UTC)
-	// until 00:00:00 January 1, 1970 
-	static const uint64_t EPOCH = ((uint64_t)116444736000000000ULL);
-
-	SYSTEMTIME  system_time;
-	FILETIME    file_time;
-	uint64_t    time;
-
-	GetSystemTime(&system_time);
-	SystemTimeToFileTime(&system_time, &file_time);
-	time = ((uint64_t)file_time.dwLowDateTime);
-	time += ((uint64_t)file_time.dwHighDateTime) << 32;
-
-	tp->tv_sec = (long)((time - EPOCH) / 10000000L);
-	tp->tv_usec = (long)(system_time.wMilliseconds * 1000);
-	return 0;
-}
 
 /*
 void findCombine( int data[], int result[],int& index , int depth , const int N

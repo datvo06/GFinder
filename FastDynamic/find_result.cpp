@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "find_result.h"
 
 

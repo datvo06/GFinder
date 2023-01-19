@@ -8,6 +8,7 @@
 
 #define MAX_NTE_QUERY 2000
 
+
 extern long long g_query_node_id_to_matching_order_num[MAX_QUERY_NODE];
 extern long long g_leaf_nodes_index;
 extern MatchOrderUnit g_matching_order_unit_of_query[MAX_QUERY_NODE];

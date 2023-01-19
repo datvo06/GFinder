@@ -7,7 +7,6 @@
 #include "global_variable.h"
 
 #define NOMINMAX
-#include <windows.h>
 
 #ifdef max
 #undef max

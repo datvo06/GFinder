@@ -10,6 +10,8 @@
 #include <assert.h>
 #include <string.h>
 #include <stdlib.h>
+#include <sys/time.h>
+// TODO: use cross platform time_t
 
 
 
@@ -35,7 +37,6 @@
 
 
 
-#include <Windows.h>
 #include <stdint.h> // portable: uint64_t   MSVC: __int64 
 
 // MSVC defines this in winsock2.h!?
@@ -43,10 +44,6 @@
 //	long tv_sec;
 //	long tv_usec;
 //} timeval;
-
-int gettimeofday(struct timeval * tp, struct timezone * tzp);
-
-
 
 /**
 @author Ying Zhang, Phd Student Student Room K17-501-7

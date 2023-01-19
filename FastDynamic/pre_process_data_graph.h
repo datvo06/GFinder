@@ -73,7 +73,7 @@ inline void preprocessDataGraph(string data_graph_file) {
 
 
 
-inline void buildAdjListAndLabelPositionMatrix(vector<vector<EdgeType>> & adj_list, long long sum_degree) {
+inline void buildAdjListAndLabelPositionMatrix(vector<vector<EdgeType> > & adj_list, long long sum_degree) {
 	g_nodes_adj_list_with_edge_type_data_graph = new EdgeType[sum_degree];
 	size_of_g_nodes_adj_list_with_edge_type_data_graph = sum_degree;
 
@@ -303,7 +303,7 @@ inline void addOneAndTwoHopNeighbor() {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 inline void readAndProcessDataGraph(string data_graph_file) {
-	vector<vector <EdgeType>> local_adj_list;
+	vector<vector <EdgeType> > local_adj_list;
 	local_adj_list.resize(g_cnt_node_of_data_graph);
 	g_transfer_label_mapping = new int[g_largest_label_data_graph + 1];
 	memset(g_transfer_label_mapping, 0, sizeof(int) * (g_largest_label_data_graph + 1));
@@ -722,7 +722,7 @@ inline void single_readQueryGraph(string query_graph_file) {
 
 	// build adj list
 	int adj_index = 0;
-	vector<vector <EdgeType>> local_adj_list;
+	vector<vector <EdgeType> > local_adj_list;
 
 	string line;
 	vector<string> v;

@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "matching_order.h"
 
 long long temp_array_query_index = 0;

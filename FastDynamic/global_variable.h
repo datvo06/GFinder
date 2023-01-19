@@ -3,7 +3,6 @@
 #ifndef FAST_DYNAMIC_GLOBAL_VARIABLE_
 #define FAST_DYNAMIC_GLOBAL_VARIABLE_
 
-#include"stdafx.h"
 #include <set>
 #include <map>
 #include <time.h>
@@ -128,7 +127,7 @@ extern vector<long long> g_forward_build_sequence;
 extern long long g_forward_build_parent[MAX_QUERY_NODE];
 extern int g_forward_level[MAX_QUERY_NODE];
 
-//extern vector<set <long long>> g_adj_list_data_graph;
+//extern vector<set <long long> > g_adj_list_data_graph;
 extern long long g_build_cpi_sequence[MAX_QUERY_NODE];
 extern long long g_build_cpi_sequence_size;
 extern int * g_already_has_one_parent_data_node;
@@ -176,13 +175,13 @@ extern int * g_one_hop_label_count_data_graph;
 extern int * g_two_hop_label_count_data_graph;
 extern int * g_one_hop_label_count_query_graph;
 extern int * g_two_hop_label_count_query_graph;
-extern vector<set<long long>> g_set_of_node_adj_list_query_graph;
+extern vector<set<long long> > g_set_of_node_adj_list_query_graph;
 extern vector < pair<long long, long long> > level_index;
 
 extern long long BFS_parent_query[MAX_QUERY_NODE];
 extern long long BFS_level_query[MAX_QUERY_NODE];
 
-//extern vector<set <int>> g_adj_list_one_to_four_data_graph;
+//extern vector<set <int> > g_adj_list_one_to_four_data_graph;
 extern HashTable * g_adj_list_one_hop_distance_data_graph;
 extern HashTable * g_adj_list_two_hop_distance_data_graph;
 
@@ -205,6 +204,8 @@ extern double * g_node_similarity_matrix;
 extern int * g_edge_matching_array;
 extern bool g_is_init_edge_matchinig_array;
 //=============================================
+//
+extern const double DBL_MAX;
 
 #endif // !FAST_DYNAMIC_GLOBAL_VARIABLE_
 

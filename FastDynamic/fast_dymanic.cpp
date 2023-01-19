@@ -1,7 +1,6 @@
 // FastDynamic.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
 #include <string>
 #include <ostream>
 #include <iostream>
@@ -20,6 +19,7 @@
 #include "core_query_tree_build.h"
 #include "inexact_matching_order.h"
 #include "find_result.h"
+#include <argparse/argparse.hpp>
 
 using namespace std;
 
@@ -92,13 +92,9 @@ inline bool is_contain_empty_indexset() {
 
 int main(int argc, char *argv[])
 {
-
 	// use for directed graph
-
-	
-
-	argv[1] = "C:\\Users\\lihui\\workspace\\github\\test_dataset\\data.format";
-	argv[2] = "C:\\Users\\lihui\\workspace\\github\\test_dataset\\query.format";
+	// argv[1] = "C:\\Users\\lihui\\workspace\\github\\test_dataset\\data.format";
+	// argv[2] = "C:\\Users\\lihui\\workspace\\github\\test_dataset\\query.format";
 
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////

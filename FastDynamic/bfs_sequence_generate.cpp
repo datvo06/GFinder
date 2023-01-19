@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "bfs_sequence_generate.h"
 
 vector < pair<long long, long long> > level_index;
