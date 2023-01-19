@@ -1,0 +1,11 @@
+t 1 5
+v 0 1 // id, label.
+v 1 1
+v 2 3
+v 3 2
+v 4 2
+e 0 1 0,1;0,1 // Out attrib 1, out attrib 2; in attrib 1, in attrib 2
+e 0 4 1,1;1,1 // Out attrib 1, out attrib 2; in attrib 1, in attrib 2
+e 1 2 2,1;2,1
+e 2 3 0,1;0,1
+e 3 4 0,1;0,1

@@ -91,6 +91,7 @@ inline bool is_contain_empty_indexset() {
 
 int main(int argc, char *argv[])
 {
+	// args: data_format, query_format
 	// use for directed graph
 	// argv[1] = "C:\\Users\\lihui\\workspace\\github\\test_dataset\\data.format";
 	// argv[2] = "C:\\Users\\lihui\\workspace\\github\\test_dataset\\query.format";
