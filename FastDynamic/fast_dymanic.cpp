@@ -19,7 +19,6 @@
 #include "core_query_tree_build.h"
 #include "inexact_matching_order.h"
 #include "find_result.h"
-#include <argparse/argparse.hpp>
 
 using namespace std;
 
